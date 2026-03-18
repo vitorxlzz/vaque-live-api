@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   const clientId = process.env.TWITCH_CLIENT_ID;
   const clientSecret = process.env.TWITCH_CLIENT_SECRET;
-  const userLogin = "SEU_CANAL_AQUI";
+  const userLogin = "vaquerei";
 
   try {
     const tokenResponse = await fetch(
