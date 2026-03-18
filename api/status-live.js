@@ -1,4 +1,8 @@
 export default async function handler(req, res) {
+  // 🔥 LIBERAR CORS
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET");
+
   const clientId = process.env.TWITCH_CLIENT_ID;
   const clientSecret = process.env.TWITCH_CLIENT_SECRET;
   const userLogin = "vaquerei";
@@ -28,6 +32,6 @@ export default async function handler(req, res) {
     });
 
   } catch (err) {
-    res.status(500).json({ error: "Erro" });
+    res.status(500).json({ error: "Erro ao verificar live" });
   }
-} 
+}
